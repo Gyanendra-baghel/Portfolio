@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+.font-cursive {
+  font-family: cursive;
+  color: red;
+}
+
+.logo {
+  font-family: cursive;
+}
+
+.gradient-blue-sky {
+  color: #fff;
+  background: linear-gradient(to right, blue 0%, skyblue 50%, blue 100%);
+}
+
+.gradient-purple-darkpurple {
+  color: #fff;
+  background: linear-gradient(to right, #da22ff 0%, #9733ee 50%, #da22ff 100%);
+}
+
+.text-gradient {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+.resume-btn {
+  background-image: linear-gradient(to right, #06b6d4, #3b82f6);
+  width: fit-content;
+  border-radius: 0.125rem;
+}
+
+.watch-btn {
+  background-image: linear-gradient(to right, #da22ff 0%, #9733ee 50%, #da22ff 100%);
+  width: 100%;
+  background-size: 200% auto;
+  margin-top: 4px;
+  border-radius: 0.125rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+@media screen and (max-width:768px) {
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    /* space-x-4 */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+  .hide {
+    display: none;
+  }
+}
